@@ -22,23 +22,64 @@ class EditTextForm : EditText {
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int):
             super(context, attrs, defStyleAttr, defStyleRes)
 
-    /* Common types of Verification */
+
     companion object {
+
+        /* Common types of Verification */
         val NONE = -1
         val TEXT = 0
         val NUMBER = 1
         val EMAIL = 2
+
+        /**
+         * Check every EditTextForm in [list]; if the verification was correct then [valid] are
+         * invoked otherwise [invalid] are invoked
+         * @param list
+         * List of EditTextForm to check
+         * @param valid
+         * Function to invoke if the check was correct
+         * @param invalid
+         * Function to invoke if the check was incorrect
+         */
+        fun checkAll(list: List<EditTextForm>, valid: () -> Unit, invalid: () -> Unit ) {
+            val verify = {
+                var allCorrect = true
+                list.forEach {
+                    allCorrect = allCorrect and it.isValid
+                }
+                if (allCorrect)
+                    valid.invoke()
+                else
+                    invalid.invoke()
+            }
+            verify.invoke()
+            list.forEach { it.stateChangeLister = verify }
+        }
+
+        /**
+         * Initialize every EditTextForm in [list] with [template]
+         * @param template
+         * Template to assign to each EditTextForm
+         * @param list
+         * List of EditTextForm to initialize
+         */
+        fun applyTemplate(template: Template, list: List<EditTextForm>){
+            list.forEach { it.initializeFromTemplate(template) }
+        }
+
     }
     /* Type verification to this EditText */
     var type: Int? = EditTextForm.NONE
 
     /* List with extra validations and its respective errors */
     private val extraValidations: ArrayList<Pair<(String) -> Boolean, Int>> = ArrayList()
-    var validListener: (() -> Unit)? = null
 
+    var stateChangeLister: (() -> Unit)? = null
     /* Define if this input is valid or not depending on all the validations added to this */
     var isValid: Boolean by Delegates.observable(false, {
-        _, oldValue, newValue -> if (oldValue != newValue) validListener?.invoke()
+        _, oldValue, newValue ->
+            if (oldValue != newValue)
+                stateChangeLister?.invoke()
     })
 
     /* REGEX to verify a valid email */
@@ -54,9 +95,7 @@ class EditTextForm : EditText {
 
     /* Watcher that verify the input every time the text changes */
     private val watcher: TextWatcher = object : TextWatcher {
-        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            verify()
-        }
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { verify() }
         override fun afterTextChanged(s: Editable?) { }
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
     }
@@ -107,7 +146,7 @@ class EditTextForm : EditText {
         type = template.type ?: EditTextForm.NONE
         typeErrorResource = template.typeErrorResource
         onFocusChangeError = template.onFocusChangeError ?: false
-        validListener = template.validListener
+        extraValidations.addAll(template.extraValidations)
     }
 
     /**
@@ -182,12 +221,9 @@ class EditTextForm : EditText {
     class Template {
         var type: Int? = null
         var typeErrorResource: Int? = null
-        var validListener: (() -> Unit)? = null
         var onFocusChangeError: Boolean? = null
+        val extraValidations: ArrayList<Pair<((String) -> Boolean), Int>> = ArrayList()
 
-        fun applyAll(vararg editTextForms: EditTextForm){
-            editTextForms.forEach { it.initializeFromTemplate(this) }
-        }
 
         class Builder {
             private val instance = Template()
@@ -200,8 +236,8 @@ class EditTextForm : EditText {
                 instance.typeErrorResource = typeErrorResource
                 return this
             }
-            fun setValidListener(validListener: (() -> Unit)): Builder {
-                instance.validListener = validListener
+            fun addValidation(validation: (String) -> Boolean, error: Int): Builder {
+                instance.extraValidations.add(Pair(validation, error))
                 return this
             }
             fun setOnFocusChangeError(onFocusChangeError: Boolean): Builder {

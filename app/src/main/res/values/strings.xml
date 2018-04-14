@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">EditTextFormGimlet</string>
+    <string name="name">Name</string>
+    <string name="email">E-mail</string>
+    <string name="card_number">Card number</string>
+    <string name="next">Next</string>
+    <string name="obligatory_field">This field is required</string>
+    <string name="valid_email">Enter a valid email</string>
+    <string name="only_numbers">Enter only numbers</string>
+    <string name="card_length">Enter the 16 digits</string>
+    <string name="blank_spaces_error">Blank spaces are not allowed</string>
 </resources>
