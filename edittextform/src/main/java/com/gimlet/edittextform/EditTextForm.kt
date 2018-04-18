@@ -67,6 +67,20 @@ class EditTextForm : EditText {
             list.forEach { it.initializeFromTemplate(template) }
         }
 
+        /**
+         * Clear every EditTextForm in [list]
+         * @param list
+         * List of EditTextForm to clear
+         */
+        fun clearAll(list: List<EditTextForm>){
+            val template = Template.Builder()
+                    .setType(EditTextForm.NONE)
+                    .setTypeErrorResource(null)
+                    .setOnFocusChangeError(false)
+                    .build()
+            applyTemplate(template, list)
+        }
+
     }
     /* Type verification to this EditText */
     var type: Int? = EditTextForm.NONE
@@ -146,6 +160,7 @@ class EditTextForm : EditText {
         type = template.type ?: EditTextForm.NONE
         typeErrorResource = template.typeErrorResource
         onFocusChangeError = template.onFocusChangeError ?: false
+        extraValidations.clear()
         extraValidations.addAll(template.extraValidations)
     }
 
@@ -232,7 +247,7 @@ class EditTextForm : EditText {
                 instance.type = type
                 return this
             }
-            fun setTypeErrorResource(typeErrorResource: Int): Builder {
+            fun setTypeErrorResource(typeErrorResource: Int?): Builder {
                 instance.typeErrorResource = typeErrorResource
                 return this
             }
