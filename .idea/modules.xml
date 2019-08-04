@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EditTextFormGimlet.iml" filepath="$PROJECT_DIR$/EditTextFormGimlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/edittextform.iml" filepath="$PROJECT_DIR$/.idea/edittextform.iml" />
       <module fileurl="file://$PROJECT_DIR$/edittextform/edittextform.iml" filepath="$PROJECT_DIR$/edittextform/edittextform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edittextform/edittextform-edittextform.iml" filepath="$PROJECT_DIR$/edittextform/edittextform-edittextform.iml" />
     </modules>
   </component>
 </project>

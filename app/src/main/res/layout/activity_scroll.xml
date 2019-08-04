@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -21,8 +21,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf1"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -32,8 +32,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf2"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -43,8 +43,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf3"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -54,8 +54,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf4"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -65,8 +65,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf5"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -76,8 +76,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf6"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -87,8 +87,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf7"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -98,8 +98,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf8"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -109,8 +109,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf9"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -120,8 +120,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf10"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -131,8 +131,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf11"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -142,8 +142,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf12"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -153,8 +153,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf13"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -164,8 +164,8 @@
                 android:layout_height="wrap_content"
                 android:hint="etf14"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             style="@style/TextInputLayoutForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -175,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:hint="etf15"
                 android:inputType="textEmailAddress"/>
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btnScrollNext"

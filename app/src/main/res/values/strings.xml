@@ -9,4 +9,5 @@
     <string name="only_numbers">Enter only numbers</string>
     <string name="card_length">Enter the 16 digits</string>
     <string name="blank_spaces_error">Blank spaces are not allowed</string>
+    <string name="personalized_error">Personalized error</string>
 </resources>

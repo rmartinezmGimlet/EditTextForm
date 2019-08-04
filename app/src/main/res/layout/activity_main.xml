@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.gimlet.edittextformgimlet.MainActivity">
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         style="@style/TextInputLayoutForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -17,9 +17,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/name"
             android:inputType="textCapWords"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         style="@style/TextInputLayoutForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -29,9 +29,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/email"
             android:inputType="textEmailAddress"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         style="@style/TextInputLayoutForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -42,7 +42,7 @@
             android:maxLength="16"
             android:hint="@string/card_number"
             android:inputType="number" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnNext"
